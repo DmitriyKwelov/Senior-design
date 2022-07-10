@@ -2,6 +2,23 @@ const iconMenu = document.querySelector('.menu__icon');
 const footer = document.querySelector('footer')
 const contacts = document.querySelector('.contacts')
 
+const root = document.documentElement
+
+
+const marqueeContent = document.querySelector('ul.marquee-content')
+
+
+root.style.setProperty('--marquee-elements', marqueeContent.children.length)
+console.log(marqueeContent.children.length);
+
+
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed')
+console.log(marqueeElementsDisplayed);
+console.log(marqueeElementsDisplayed.length);
+for (let index = 0; index < 3; index++) {
+    marqueeContent.appendChild(marqueeContent.children[index].cloneNode(true))
+}
+
 if (window.screen.width <= 768) {
     let activeSlide = 0;
     let position = 0;
@@ -15,7 +32,7 @@ if (window.screen.width <= 768) {
     sliderItem.forEach(item => {
         item.style.minWidth = `${widthSlider}px`
     });
-
+    console.log(document.documentElement);
     wraper.addEventListener('swiped-right', function (e) {
         if (position !== 0) {
             position += movePosition;
