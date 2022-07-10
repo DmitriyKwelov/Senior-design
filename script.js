@@ -2,13 +2,13 @@ const iconMenu = document.querySelector('.menu__icon');
 const footer = document.querySelector('footer')
 const contacts = document.querySelector('.contacts')
 
-if(window.screen.width <= 768) {
+if (window.screen.width <= 768) {
+    let activeSlide = 0;
     let position = 0;
     const track = document.querySelector('.third__section__content');
     const sliderItem = document.querySelectorAll('.item')
     const wraper = document.querySelector('.wraper');
-    const prev = document.querySelector('.prev')
-    const next = document.querySelector('.next')
+    const pointsSlider = document.querySelector('.points__slider')
     const widthSlider = wraper.clientWidth
     const countItem = sliderItem.length
     const movePosition = widthSlider
@@ -16,42 +16,69 @@ if(window.screen.width <= 768) {
         item.style.minWidth = `${widthSlider}px`
     });
 
-    wraper.addEventListener('swiped-right', function(e){
-        position += movePosition;
-        setPosition();
-        console.log(position);
+    wraper.addEventListener('swiped-right', function (e) {
+        if (position !== 0) {
+            position += movePosition;
+            activeSlide = activeSlide - 1;
+            setPosition();
+            setPoint();
+            console.log(activeSlide);
+        }
     })
 
-    wraper.addEventListener('swiped-left', function(e){
-        position -= movePosition;
-        setPosition();
-        console.log(position);
+    wraper.addEventListener('swiped-left', function (e) {
+        if (position !== -(countItem * widthSlider - widthSlider)) {
+            position -= movePosition;
+            activeSlide = activeSlide + 1;
+            setPosition();
+            setPoint();
+            console.log(activeSlide);
+        }
     })
 
-    prev.addEventListener('click', function(e){
-        position += movePosition;
-        setPosition();
-        console.log(position);
-    })
-
-    next.addEventListener('click', function(e){
-        position -= movePosition;
-        setPosition();
-        console.log(position);
-    })
-
+    for (let i = 0; i < sliderItem.length; i++) {
+        const span = document.createElement("span");
+        span.className = "point";
+        if(activeSlide == i) {
+            span.classList.add('active');
+        }
+        pointsSlider.append(span);
+      } 
+    const setPoint = () => {
+        const points = document.querySelectorAll('.point')
+        for (let i = 0; i < points.length; i++) {
+            points[i].classList.remove('active');
+            if(i == activeSlide) {
+                points[i].classList.add('active');
+            }
+        }
+    }
     const setPosition = () => {
         track.style.transform = `translateX(${position}px)`;
+    }
+    const points = document.querySelectorAll('.point')
+    points.forEach(point => {
+        point.addEventListener("click", function(e) {
+            for (let i = 0; i < points.length; i++) {
+                if(points[i] == point){
+                    position = -(widthSlider * i)
+                    activeSlide = i
+                    track.style.transform = `translateX(${position}px)`;
+                    setPoint();
+                }
+            }
+        }) 
+    });    
+
 }
-}
 
 
 
-if (iconMenu){
+if (iconMenu) {
     const menuBody = document.querySelector('.menu__body');
     const langMob = document.querySelector('.lang__mob')
     const body = document.querySelector('body')
-    iconMenu.addEventListener("click", function(e) {
+    iconMenu.addEventListener("click", function (e) {
         iconMenu.classList.toggle('active');
         menuBody.classList.toggle('active');
         langMob.classList.toggle('active');
@@ -210,11 +237,11 @@ if (iconMenu){
 // footer.addEventListener("click", function(e) {
 //     contacts.classList.toggle('active');
 // })
-footer.addEventListener('swiped-up', function(e) {
+footer.addEventListener('swiped-up', function (e) {
     console.log(e.target);
     contacts.classList.add('active');
 });
-footer.addEventListener('swiped-down', function(e) {
+footer.addEventListener('swiped-down', function (e) {
     console.log(e.target);
     contacts.classList.remove('active');
 });

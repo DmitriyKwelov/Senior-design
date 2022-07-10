@@ -15,6 +15,11 @@ header{
     margin: 0 auto;
     padding: 0 40px;
 }
+.container__section__slider{
+    max-width: 1439px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
 .logo{
     padding: 0 114px 0 0;
 }
@@ -910,6 +915,9 @@ footer{
         justify-content: center;
         margin-top: 70px;
     }
+    #third__section{
+        margin-top: 50px;
+    }
     .mob__img{
         display: block;
     }
@@ -968,6 +976,7 @@ footer{
     .third__section__content{
         justify-content: flex-start;
         flex-wrap: nowrap;
+        transition: 0.4s;
     }
     .item{
         width: 100%;
@@ -979,6 +988,54 @@ footer{
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+    .container__section__slider{
+        max-width: 1439px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .third__section__item{
+        padding-top: 40px;
+    }
+    .title__third__section__item{
+        flex-direction: column-reverse;
+    }
+    .light{
+        content: "";
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        background: #B49DFF;
+        filter: blur(50px);
+        top: 55px;
+        right: 50%;
+        margin-right: -22px;
+        z-index: 1;
+    }
+    .point.active{
+        display: block;
+        content: "";
+        width: 9px;
+        height: 9px;
+        background: #fff;
+        border-radius: 100px;
+        margin: 0 10px;
+        opacity: 1;
+    }
+    .point{
+        width: 7px;
+        height: 7px;
+        background: #FFFFFF;
+        opacity: 0.5;
+        border-radius: 100px;
+        margin: 0 10px;
+    }
+    .points__slider{
+        margin-top: 27px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
     }
 }
 @media (max-width: 600px) {
