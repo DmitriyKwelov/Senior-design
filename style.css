@@ -1224,6 +1224,7 @@ footer {
 
     .mob__img {
         display: block;
+        height: auto;
     }
 
     .container__for__more__btn {
