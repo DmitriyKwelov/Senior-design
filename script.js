@@ -15,7 +15,7 @@ console.log(marqueeContent.children.length);
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed')
 console.log(marqueeElementsDisplayed);
 console.log(marqueeElementsDisplayed.length);
-for (let index = 0; index < 3; index++) {
+for (let index = 0; index < 4; index++) {
     marqueeContent.appendChild(marqueeContent.children[index].cloneNode(true))
 }
 
