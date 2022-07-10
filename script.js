@@ -1,6 +1,52 @@
 const iconMenu = document.querySelector('.menu__icon');
 const footer = document.querySelector('footer')
 const contacts = document.querySelector('.contacts')
+
+if(window.screen.width <= 768) {
+    let position = 0;
+    const track = document.querySelector('.third__section__content');
+    const sliderItem = document.querySelectorAll('.item')
+    const wraper = document.querySelector('.wraper');
+    const prev = document.querySelector('.prev')
+    const next = document.querySelector('.next')
+    const widthSlider = wraper.clientWidth
+    const countItem = sliderItem.length
+    const movePosition = widthSlider
+    sliderItem.forEach(item => {
+        item.style.minWidth = `${widthSlider}px`
+    });
+
+    wraper.addEventListener('swiped-right', function(e){
+        position += movePosition;
+        setPosition();
+        console.log(position);
+    })
+
+    wraper.addEventListener('swiped-left', function(e){
+        position -= movePosition;
+        setPosition();
+        console.log(position);
+    })
+
+    prev.addEventListener('click', function(e){
+        position += movePosition;
+        setPosition();
+        console.log(position);
+    })
+
+    next.addEventListener('click', function(e){
+        position -= movePosition;
+        setPosition();
+        console.log(position);
+    })
+
+    const setPosition = () => {
+        track.style.transform = `translateX(${position}px)`;
+}
+}
+
+
+
 if (iconMenu){
     const menuBody = document.querySelector('.menu__body');
     const langMob = document.querySelector('.lang__mob')
