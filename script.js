@@ -3,8 +3,7 @@ const footer = document.querySelector('footer')
 const contacts = document.querySelector('.contacts')
 
 
-if(document.querySelector('ul.marquee-content')){
-    const root = document.documentElement
+const root = document.documentElement
 
 
 const marqueeContent = document.querySelector('ul.marquee-content')
@@ -19,7 +18,6 @@ console.log(marqueeElementsDisplayed);
 console.log(marqueeElementsDisplayed.length);
 for (let index = 0; index < 4; index++) {
     marqueeContent.appendChild(marqueeContent.children[index].cloneNode(true))
-}
 }
 
 
