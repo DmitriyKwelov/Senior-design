@@ -2,7 +2,9 @@ const iconMenu = document.querySelector('.menu__icon');
 const footer = document.querySelector('footer')
 const contacts = document.querySelector('.contacts')
 
-const root = document.documentElement
+
+if(document.querySelector('ul.marquee-content')){
+    const root = document.documentElement
 
 
 const marqueeContent = document.querySelector('ul.marquee-content')
@@ -18,6 +20,8 @@ console.log(marqueeElementsDisplayed.length);
 for (let index = 0; index < 4; index++) {
     marqueeContent.appendChild(marqueeContent.children[index].cloneNode(true))
 }
+}
+
 
 if (window.screen.width <= 768) {
     let activeSlide = 0;

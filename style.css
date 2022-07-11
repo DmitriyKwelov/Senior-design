@@ -165,6 +165,7 @@ header {
 
 #third__section {
     margin-top: 219px;
+    position: relative;
 }
 
 #fourth__section {
@@ -325,7 +326,6 @@ h2 {
     opacity: 0.2;
     border: 1px solid #C4C4C4;
 }
-
 .mob__img {
     display: none;
 }
@@ -426,7 +426,9 @@ h2 {
         transform: translateX(-50%);
     }
 }
-
+#second__section{
+    position: relative;
+}
 .second__section__content {
     display: flex;
     justify-content: space-between;
@@ -516,7 +518,7 @@ h2 {
     flex-direction: column;
 }
 
-.fifth__section__right__content input {
+.input__text {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
     height: 63px;
@@ -525,7 +527,7 @@ h2 {
     margin-bottom: 13px;
 }
 
-.fifth__section__right__content textarea {
+.textarea__form {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
     height: 170px;
@@ -534,25 +536,69 @@ h2 {
     margin-bottom: 13px;
 }
 
-::placeholder {
+.input__text::placeholder {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
     color: #FFFFFF;
-    padding: 0 0 0 15px;
 }
-
-.checkbox {
+.input__text[type~="text"]{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    padding: 0 0 0 15px; 
+}
+.textarea__form{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    padding: 15px 0 0 15px; 
+}
+.label{
+    margin-top: 10px;
     display: flex;
     align-items: center;
 }
-
-.checkbox input {
-    margin: 0;
+.checkbox {
+    display: none;
 }
-
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+.custom-checkbox{
+    display: inline-block;
+    min-width: 38px;
+    height: 38px;
+    border: 1px solid #6A60BA;
+    border-radius: 10px;
+    position: relative;
+    margin-right: 22px;
+}
+.custom-checkbox::before{
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #220778;
+    opacity: 0;
+    transition: 1s;
+}
+.checkbox:checked + .custom-checkbox::before{
+    opacity: 1;
+}
 .checkbox__description {
     font-family: 'Montserrat';
     font-style: normal;
@@ -567,6 +613,7 @@ h2 {
 .sub__btn {
     width: 450px;
     height: 76px;
+    margin-top: 34px;
 }
 
 .container__for__sub__btn {
@@ -706,7 +753,99 @@ footer {
 .mob__marquee__picture{
     display: none;
 }
+.fifth__section__left__content p{
+    width: 90%;
+}
+.circle__light{
+    position: absolute;
+    width: 644px;
+    height: 644px;
+    left: -516.33px;
+    top: 298.78px;
+    background: rgba(152, 152, 255, 0.4);
+    opacity: 0.4;
+    filter: blur(167px);
+    z-index: -1;
+}
+.circle__light2{
+    position: absolute;
+    width: 385px;
+    height: 385px;
+    right: 0;
+    top: 101.41px;
 
+    background: #527880;
+    opacity: 0.3;
+    filter: blur(150px);
+    z-index: -1;
+}
+.circle__light3{
+    position: absolute;
+    right: 0;
+    top: 500px;
+    z-index: -1;
+}
+.circle__light4{
+    position: absolute;
+    left: 0;
+    top: 200px;
+    z-index: -1;
+}
+.ball__main__section{
+    position: absolute;
+    width: 64.78px;
+    height: 64.75px;
+    right: 200px;
+    top: 279.69px;
+}
+/* nft */
+.NFT__gradient{
+    background: radial-gradient(107.69% 1847.47% at 1.82% 80.23%, #F1B46C 64.63%, #A28CC7 79.04%, #80AEC5 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.first__scection__nft__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main__circle__nft1{
+    z-index: -1;
+    position: absolute;
+    width: 1070.92px;
+    height: 1071.1px;
+    left: -70.28px;
+    top: -20.84px;
+    opacity: 0.2;
+    border: 1px solid #C4C4C4;
+    border-radius: 100%;
+}
+.main__circle__nft2{
+    z-index: -1;
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    left: 129.79px;
+    top: 164.71px;
+    opacity: 0.2;
+    border: 1px solid #C4C4C4;
+    border-radius: 100%;
+}
+.first__scection__nft__left img{
+    position: absolute;
+    left: 251.71px;
+    top: 194px;
+}
+.first__scection__nft__right{
+    margin: 150px 0 0 630px;
+}
+.takeBtn{
+    width: 290px;
+    height: 75px;
+    margin-top: 12px;
+}
 @media (max-width: 1680px) {
     .first__section__right__content img {
         z-index: 7;
@@ -751,6 +890,37 @@ footer {
         background: radial-gradient(89.17% 89.17% at 34.28% 89.17%, #77B7C4 0%, #A48AC7 100%)
             /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         ;
+    }
+    /* nft */
+    .main__circle__nft1{
+        z-index: -1;
+        position: absolute;
+        width: 1070.92px;
+        height: 1071.1px;
+        left: -270.28px;
+        top: -20.84px;
+        opacity: 0.2;
+        border: 1px solid #C4C4C4;
+        border-radius: 100%;
+    }
+    .main__circle__nft2{
+        z-index: -1;
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        left: -129.79px;
+        top: 164.71px;
+        opacity: 0.2;
+        border: 1px solid #C4C4C4;
+        border-radius: 100%;
+    }
+    .first__scection__nft__left img{
+        position: absolute;
+        left: 10px;
+        top: 194px;
+    }
+    .first__scection__nft__right{
+        margin: 150px 0 0 590px;
     }
 }
 
@@ -833,6 +1003,10 @@ footer {
             /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         ;
     }
+    .ball__main__section{
+        top: 250px;
+        right: 100px;
+    }
 
     .circle11 {
         display: block;
@@ -854,7 +1028,11 @@ footer {
         --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
     }
 }
-
+@media (max-width: 1203px) {
+    .contacts{
+        margin-top: 30px;
+    }
+}
 @media (max-width: 1200px) {
     .first__section__right__content {
         position: relative;
@@ -932,6 +1110,9 @@ footer {
             /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         ;
     }
+    .ball__main__section{
+        display: none;
+    }
 
     .marquee__infinitee {
         margin-top: 0px;
@@ -957,6 +1138,10 @@ footer {
         --marquee-elements-displayed: 2;
         --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed))) ;
         --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+    }
+    /* nft */
+    .first__scection__nft__right{
+        margin: 150px 0 0 500px;
     }
 }
 
@@ -1172,7 +1357,50 @@ footer {
     }
 
 }
-
+@media (max-width: 837px) {
+    .social__media__cotntainer{
+        margin-top: 30px;
+    }
+    /* nft */
+    .first__scection__nft__content{
+        flex-wrap: wrap-reverse;
+    }
+    .first__scection__nft__left{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .first__scection__nft__left img{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .first__scection__nft__right {
+        margin: 100px 0 0 0;
+    }
+    .main__circle__nft1{
+        z-index: -1;
+        position: absolute;
+        width: 1070.92px;
+        height: 1071.1px;
+        left: -520.28px;
+        top: 120px;
+        opacity: 0.2;
+        border: 1px solid #C4C4C4;
+        border-radius: 100%;
+    }
+    .main__circle__nft2{
+        z-index: -1;
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        left: -379.79px;
+        top: 304.71px;
+        opacity: 0.2;
+        border: 1px solid #C4C4C4;
+        border-radius: 100%;
+    }
+}
 @media (max-width: 768px) {
     :root {
         --marquee-elements-displayed: 1.5;
@@ -1238,6 +1466,9 @@ footer {
     }
 
     .fifth__section__left__content {
+        width: 100%;
+    }
+    .fifth__section__left__content p{
         width: 100%;
     }
 
@@ -1369,6 +1600,26 @@ footer {
     .line__footer{
         display: block;
     }
+    .circle__light{
+        position: absolute;
+        width: 644px;
+        height: 644px;
+        left: -516.33px;
+        top: 298.78px;
+        background: rgba(152, 152, 255, 0.4);
+        opacity: 0.4;
+        filter: blur(167px);
+        z-index: -1;
+    }
+    .circle__light2{
+        display: none;
+    }
+    .circle__light3{
+        display: none;
+    }
+    .circle__light4{
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1494,9 +1745,83 @@ footer {
     .second__section__content__item{
         margin-top: 40px;
     }
+    .input__text { 
+        height: 34px;
+        margin-bottom: 7px;
+    }
+    
+    .textarea__form {
+        height: 90px;
+        margin-bottom: 7px;
+    }
+    .custom-checkbox{
+        display: inline-block;
+        min-width: 22px;
+        height: 22px;
+        border: 1px solid #6A60BA;
+        border-radius: 6px;
+        position: relative;
+        margin-right: 13px;
+    }
+    .custom-checkbox::before{
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background: #220778;
+        opacity: 0;
+        transition: 1s;
+    }
+    .checkbox:checked + .custom-checkbox::before{
+        opacity: 1;
+    }
+    .checkbox__description {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 0;
+    }
+    .sub__btn{
+        width: 186px;
+        height: 45px;
+    }
+    .main__circle__nft1{
+        z-index: -1;
+        position: absolute;
+        width: 705.88px;
+        height: 706px;
+        left: -288px;
+        top: 169px;
+        opacity: 0.2;
+        border: 0.659136px solid #C4C4C4;
+        border-radius: 100%;
+    }
+    .main__circle__nft2{
+        z-index: -1;
+        position: absolute;
+        width: 461.4px;
+        height: 461.4px;
+        left: -156.12px;
+        top: 291.3px;
+        opacity: 0.2;
+        border: 0.659136px solid #C4C4C4;
+        border-radius: 100%;
+    }
+    .first__scection__nft__left img{
+        margin-top: 17px;
+        width: 60%;
+    }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
     :root {
         --marquee-elements-displayed: 1;
         --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed))) ;
@@ -1581,5 +1906,45 @@ footer {
         position: absolute;
         top: 6px;
         right: 18px;
+    }
+    .third__section__item {
+        width: 300px;
+        height: 380px;
+    }
+    /* nft */
+    .takeBtn__container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .takeBtn{
+        width: 250px;
+        height: 45px;
+    }
+    .main__circle__nft1{
+        z-index: -1;
+        position: absolute;
+        width: 705.88px;
+        height: 706px;
+        left: -388px;
+        top: 169px;
+        opacity: 0.2;
+        border: 0.659136px solid #C4C4C4;
+        border-radius: 100%;
+    }
+    .main__circle__nft2{
+        z-index: -1;
+        position: absolute;
+        width: 461.4px;
+        height: 461.4px;
+        left: -256.12px;
+        top: 291.3px;
+        opacity: 0.2;
+        border: 0.659136px solid #C4C4C4;
+        border-radius: 100%;
+    }
+    .first__scection__nft__left img {
+        margin-top: 17px;
+        width: 200px;
     }
 }
