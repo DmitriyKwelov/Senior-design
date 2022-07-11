@@ -846,6 +846,75 @@ footer {
     height: 75px;
     margin-top: 12px;
 }
+
+
+/* mac */
+#nft__faq{
+    margin-top: 300px;
+}
+.nft__faq__item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    transition: 1s;
+}
+.nft__faq__icon__content{
+    width: 75px;
+    height: 75px;
+    background: linear-gradient(271.18deg, #6C57AE 1.14%, #6957E1 117.13%);
+    box-shadow: 0px 2.9703px 2.9703px rgba(0, 0, 0, 0.25);
+    border-radius: 14.8515px;
+}
+.nft__faq__info{
+    width: 85%;
+}
+.nft__faq__title{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(271.18deg, #6C57AE 1.14%, #6957E1 117.13%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.nft__faq__title__text{
+    margin: 0 0 0 28px;
+}
+.nft__faq__icon__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nft__faq__icon{
+    display: block;
+    position: relative;
+    content: '';
+    width: 34px;
+    height: 1px;
+    background: #fff;
+    transition: 0.4s;
+}
+.nft__faq__icon::before{
+    display: block;
+    position: relative;
+    content: '';
+    width: 34px;
+    height: 1px;
+    background: #fff;
+    transform: rotate(-90deg) translate(0px, -50%);
+    transition: 0.4s;
+    opacity: 1;
+}
+.nft__faq__item.active  .nft__faq__icon::before{
+    transform: rotate(0deg) translate(0px, -50%);
+    opacity: 0;
+}
+.nft__faq__item p{
+    display: none;
+}
+.nft__faq__item.active p{
+    display: block;
+}
 @media (max-width: 1680px) {
     .first__section__right__content img {
         z-index: 7;
