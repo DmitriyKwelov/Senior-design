@@ -194,6 +194,14 @@ h2 {
     line-height: 44px;
     color: #FFFFFF;
 }
+h3{
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
 
 .description {
     font-family: 'Montserrat';
@@ -799,6 +807,9 @@ footer {
     top: 279.69px;
 }
 /* nft */
+#first__scection__nft{
+    margin-bottom: 400px;
+}
 .NFT__gradient{
     background: radial-gradient(107.69% 1847.47% at 1.82% 80.23%, #F1B46C 64.63%, #A28CC7 79.04%, #80AEC5 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     -webkit-background-clip: text;
@@ -846,9 +857,56 @@ footer {
     height: 75px;
     margin-top: 12px;
 }
-
-
-/* mac */
+.nft__list{
+    padding-left: 20px;
+}
+.nft__list li{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.second__scection__nft__content{
+    display: flex;
+    justify-content: space-between;
+}
+.second__scection__nft__right{
+    position: relative;
+}
+.bg__light__nft__picture{
+    position: absolute;
+    width: 527px;
+    height: 527px;
+    background: #665280;
+    opacity: 0.5;
+    filter: blur(150px);
+    z-index: -1;
+}
+.third__scection__nft__content{
+    display: flex;
+}
+.box__work__nft{
+    width: 317px;
+    height: 436px;
+    left: 240px;
+    top: 1823px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin-right: 60px;
+}
+.box__work__nft__number{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 110px;
+    color: #FFFFFF;
+}
+.box__work__nft.active{
+    background: linear-gradient(271.18deg, #6C57AE 1.14%, #6957E1 117.13%);
+}
 #nft__faq{
     margin-top: 300px;
 }
@@ -1212,6 +1270,12 @@ footer {
     .first__scection__nft__right{
         margin: 150px 0 0 500px;
     }
+    .second__scection__nft__content{
+        align-items: center;
+    }
+    .second__scection__nft__right img{ 
+        width: 450px;
+    }
 }
 
 @media (max-width: 1099px) {
@@ -1468,6 +1532,21 @@ footer {
         opacity: 0.2;
         border: 1px solid #C4C4C4;
         border-radius: 100%;
+    }
+    .second__scection__nft__content{
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .second__scection__nft__right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .second__scection__nft__right img{ 
+        width: 450px;
+    }
+    #first__scection__nft{
+        margin-bottom: 150px;
     }
 }
 @media (max-width: 768px) {
@@ -1862,6 +1941,7 @@ footer {
         width: 186px;
         height: 45px;
     }
+    /* nft */
     .main__circle__nft1{
         z-index: -1;
         position: absolute;
@@ -1887,6 +1967,15 @@ footer {
     .first__scection__nft__left img{
         margin-top: 17px;
         width: 60%;
+    }
+    #first__scection__nft{
+        margin-bottom: 100px;
+    }
+    .second__scection__nft__right img{
+        width: 320px;
+    }
+    .bg__light__nft__picture{
+        display: none;
     }
 }
 
