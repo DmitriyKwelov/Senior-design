@@ -1,3 +1,14 @@
+const container = document.querySelector('.container')
+containerNftWork = document.querySelector('.container__nft__work')
+console.log(parseFloat(getComputedStyle(container).marginLeft));
+console.log(containerNftWork);
+containerNftWork.style.marginLeft = getComputedStyle(container).marginLeft;
+// container.forEach(element => {
+//     console.log(getComputedStyle(element).marginLeft);
+//     console.log(element.style.maxWidth);
+// });
+
+
 if (window.screen.width <= 1010) {
     let activeSlide = 0;
     let position = 0;
@@ -62,6 +73,73 @@ if (window.screen.width <= 1010) {
                     activeSlide = i
                     track.style.transform = `translateX(${position}px)`;
                     setPoint();
+                }
+            }
+        }) 
+    });    
+
+}
+if (window.screen.width <= 1010) {
+    let activeSlideWork = 0;
+    let positionWork = 0;
+    const trackWork = document.querySelector('.third__scection__nft__content');
+    const sliderItemWork = document.querySelectorAll('.box__work__nft')
+    const wraperWork = document.querySelector('.wrapper__nft__work');
+    const pointsSliderWork = document.querySelector('.points__slider__nft__work')
+    const sliderItemLengthWork = sliderItemWork.length
+    const widthSliderWork = wraperWork.clientWidth
+    const countItemWork = sliderItemWork.length
+    const movePositionWork = widthSliderWork
+    sliderItemWork.forEach(item => {
+        item.style.minWidth = `${widthSliderWork}px`
+    });
+    wraperWork.addEventListener('swiped-right', function (e) {
+        if (positionWork !== 0) {
+            positionWork += movePositionWork;
+            activeSlideWork = activeSlideWork - 1;
+            setPositionWork();
+            setPointWork();
+        }
+    })
+
+    wraperWork.addEventListener('swiped-left', function (e) {
+        if (positionWork > -(countItemWork * widthSliderWork - widthSliderWork)) {
+            positionWork -= movePositionWork;
+            activeSlideWork = activeSlideWork + 1;
+            setPositionWork();
+            setPointWork();
+        }
+    })
+
+    for (let i = 0; i < sliderItemLengthWork; i++) {
+        const span = document.createElement("span");
+        span.className = "pointWork";
+        if(activeSlideWork == i) {
+            span.classList.add('active');
+        }
+        pointsSliderWork.append(span);
+      } 
+    const setPointWork = () => {
+        const pointsWork = document.querySelectorAll('.pointWork')
+        for (let i = 0; i < pointsWork.length; i++) {
+            pointsWork[i].classList.remove('active');
+            if(i == activeSlideWork) {
+                pointsWork[i].classList.add('active');
+            }
+        }
+    }
+    const setPositionWork = () => {
+        trackWork.style.transform = `translateX(${positionWork}px)`;
+    }
+    const pointsWork = document.querySelectorAll('.pointWork')
+    pointsWork.forEach(pointWork => {
+        pointWork.addEventListener("click", function(e) {
+            for (let i = 0; i < pointsWork.length; i++) {
+                if(pointsWork[i] == pointWork){
+                    positionWork = -(widthSliderWork * i)
+                    activeSlideWork = i
+                    trackWork.style.transform = `translateX(${positionWork}px)`;
+                    setPointWork();
                 }
             }
         }) 

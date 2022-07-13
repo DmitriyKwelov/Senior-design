@@ -889,7 +889,7 @@ footer {
     position: relative;
     width: 100%;
 }
-.fawefaw{
+.wrapper__nft__work{
     width: 100%;
     overflow: hidden;
 }
@@ -900,14 +900,16 @@ footer {
     width: 100vw;
 }
 .box__work__nft{
-    min-width: 317px;
-    height: 436px;
-    padding: 20px 30px;
+    min-width: 357px;
+    height: 496px;
     border-radius: 20px;
     margin-right: 60px;
     background: linear-gradient(271.18deg, rgba(108, 87, 174, 0) 1.14%, rgba(105, 87, 225, 0) 117.13%);
     transition: 1s;
     position: relative;
+}
+.box__work__nft__content{
+    padding: 20px 30px;
 }
 .box__work__nft__number{
     font-family: 'Montserrat';
@@ -1263,6 +1265,12 @@ footer {
     border-radius: 20px;
     position: inherit;
     margin-bottom: 65px;
+    position: relative;
+}
+.teem__nft__item__img{
+    position: absolute;
+    top: -42px;
+    right: -15px;
 }
 .teem__nft__item:nth-child(3n+2){
     background: #290000;
@@ -1708,6 +1716,41 @@ footer {
     .wrapper__teem__nft{
         width: 100%;
         overflow: hidden;
+    }
+    .box__work__nft{
+        width: 100%;
+        margin-bottom: 25px;
+        transition: 0.4s;
+    }
+    .box__work__nft{
+        min-width: 317px;
+        height: 436px;
+        border-radius: 20px;
+        margin-right: 0;
+        background: linear-gradient(271.18deg, rgba(108, 87, 174, 0) 1.14%, rgba(105, 87, 225, 0) 117.13%);
+        transition: 1s;
+        position: relative;
+    }
+    .box__work__nft{
+        background: linear-gradient(271.18deg, rgba(108, 87, 174, 1) 1.14%, rgba(105, 87, 225, 1) 117.13%);
+        transition: 1s;
+    }
+    .box__work__nft .bg__line__box__work__nft{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #6C57B3;
+        z-index: -1;
+    }
+    .box__work__nft .description{
+        opacity: 1;
+    }
+    .box__work__nft .box__work__nft__picture{
+        position: absolute;
+        top: -40px;
+        right: 0;
+        opacity: 1;
     }
 }
 
@@ -2247,13 +2290,37 @@ footer {
         border-radius: 100px;
         margin: 0 10px;
     }
+    .pointWork.active {
+        display: block;
+        content: "";
+        width: 9px;
+        height: 9px;
+        background: #fff;
+        border-radius: 100px;
+        margin: 0 10px;
+        opacity: 1;
+    }
+
+    .pointWork {
+        width: 7px;
+        height: 7px;
+        background: #FFFFFF;
+        opacity: 0.5;
+        border-radius: 100px;
+        margin: 0 10px;
+    }
 
     .points__slider {
         margin-top: 27px;
         display: flex;
         justify-content: center;
         width: 100%;
-
+    }
+    .points__slider__nft__work{
+        margin-top: 27px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
     .line__footer__light{
         display: block;
@@ -2574,6 +2641,14 @@ footer {
         font-size: 20px;
         line-height: 24px;
         color: #FFFFFF;
+    }
+    .teem__nft__item__img{
+        right: 0;
+    }
+    .container__nft__work {
+        max-width: 1439px;
+        margin: 0 auto;
+        padding: 0 17px;
     }
 }
 @media (max-width: 500px) {
