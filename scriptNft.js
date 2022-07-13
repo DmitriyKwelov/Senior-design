@@ -1,49 +1,13 @@
-const iconMenu = document.querySelector('.menu__icon');
-const footer = document.querySelector('footer')
-const contacts = document.querySelector('.contacts')
-const nftFaq = document.querySelectorAll('.nft__faq__item')
-const boxNft = document.querySelectorAll('.box__work__nft')
-
-console.log(nftFaq);
-
-boxNft.forEach(item => {
-    item.addEventListener('click', function(e) {
-        boxNft.forEach(item => {
-            item.classList.remove('active')
-        })
-        item.classList.add('active')
-    })
-});
-nftFaq.forEach(item => {
-    item.addEventListener('click', function(e) {
-        item.classList.toggle('active')
-    })
-});
-const root = document.documentElement
-
-
-const marqueeContent = document.querySelector('ul.marquee-content')
-
-
-root.style.setProperty('--marquee-elements', marqueeContent.children.length)
-console.log(marqueeContent.children.length);
-
-
-const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed')
-for (let index = 0; index < 4; index++) {
-    marqueeContent.appendChild(marqueeContent.children[index].cloneNode(true))
-}
-
-
-if (window.screen.width <= 768) {
+if (window.screen.width <= 1010) {
     let activeSlide = 0;
     let position = 0;
-    const track = document.querySelector('.third__section__content');
-    const sliderItem = document.querySelectorAll('.item')
-    const wraper = document.querySelector('.wraper');
+    const track = document.querySelector('.teem__nft');
+    const sliderItem = document.querySelectorAll('.teem__nft__item')
+    const wraper = document.querySelector('.wrapper__teem__nft');
     const pointsSlider = document.querySelector('.points__slider')
+    const sliderItemLength = sliderItem.length / 2
     const widthSlider = wraper.clientWidth
-    const countItem = sliderItem.length
+    const countItem = sliderItem.length / 2
     const movePosition = widthSlider
     sliderItem.forEach(item => {
         item.style.minWidth = `${widthSlider}px`
@@ -60,7 +24,7 @@ if (window.screen.width <= 768) {
     })
 
     wraper.addEventListener('swiped-left', function (e) {
-        if (position !== -(countItem * widthSlider - widthSlider)) {
+        if (position > -(countItem * widthSlider - widthSlider)) {
             position -= movePosition;
             activeSlide = activeSlide + 1;
             setPosition();
@@ -69,7 +33,7 @@ if (window.screen.width <= 768) {
         }
     })
 
-    for (let i = 0; i < sliderItem.length; i++) {
+    for (let i = 0; i < sliderItemLength; i++) {
         const span = document.createElement("span");
         span.className = "point";
         if(activeSlide == i) {
@@ -107,17 +71,6 @@ if (window.screen.width <= 768) {
 
 
 
-if (iconMenu) {
-    const menuBody = document.querySelector('.menu__body');
-    const langMob = document.querySelector('.lang__mob')
-    const body = document.querySelector('body')
-    iconMenu.addEventListener("click", function (e) {
-        iconMenu.classList.toggle('active');
-        menuBody.classList.toggle('active');
-        langMob.classList.toggle('active');
-        body.classList.toggle('lock');
-    })
-}
 (function (window, document) {
 
     'use strict';
@@ -267,14 +220,3 @@ if (iconMenu) {
     }
 
 }(window, document));
-// footer.addEventListener("click", function(e) {
-//     contacts.classList.toggle('active');
-// })
-footer.addEventListener('swiped-up', function (e) {
-    console.log(e.target);
-    contacts.classList.add('active');
-});
-footer.addEventListener('swiped-down', function (e) {
-    console.log(e.target);
-    contacts.classList.remove('active');
-});
