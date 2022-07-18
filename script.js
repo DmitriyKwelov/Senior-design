@@ -1,112 +1,9 @@
 const iconMenu = document.querySelector('.menu__icon');
 const footer = document.querySelector('footer')
 const contacts = document.querySelector('.contacts')
-const nftFaq = document.querySelectorAll('.nft__faq__item')
-const boxNft = document.querySelectorAll('.box__work__nft')
-
-console.log(nftFaq);
-
-boxNft.forEach(item => {
-    item.addEventListener('click', function(e) {
-        boxNft.forEach(item => {
-            item.classList.remove('active')
-        })
-        item.classList.add('active')
-    })
-});
-nftFaq.forEach(item => {
-    item.addEventListener('click', function(e) {
-        item.classList.toggle('active')
-    })
-});
-const root = document.documentElement
 
 
-const marqueeContent = document.querySelector('ul.marquee-content')
-
-
-root.style.setProperty('--marquee-elements', marqueeContent.children.length)
-console.log(marqueeContent.children.length);
-
-
-const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed')
-for (let index = 0; index < 4; index++) {
-    marqueeContent.appendChild(marqueeContent.children[index].cloneNode(true))
-}
-
-
-if (window.screen.width <= 768) {
-    let activeSlide = 0;
-    let position = 0;
-    const track = document.querySelector('.third__section__content');
-    const sliderItem = document.querySelectorAll('.item')
-    const wraper = document.querySelector('.wraper');
-    const pointsSlider = document.querySelector('.points__slider')
-    const widthSlider = wraper.clientWidth
-    const countItem = sliderItem.length
-    const movePosition = widthSlider
-    sliderItem.forEach(item => {
-        item.style.minWidth = `${widthSlider}px`
-    });
-    console.log(document.documentElement);
-    wraper.addEventListener('swiped-right', function (e) {
-        if (position !== 0) {
-            position += movePosition;
-            activeSlide = activeSlide - 1;
-            setPosition();
-            setPoint();
-            console.log(activeSlide);
-        }
-    })
-
-    wraper.addEventListener('swiped-left', function (e) {
-        if (position !== -(countItem * widthSlider - widthSlider)) {
-            position -= movePosition;
-            activeSlide = activeSlide + 1;
-            setPosition();
-            setPoint();
-            console.log(activeSlide);
-        }
-    })
-
-    for (let i = 0; i < sliderItem.length; i++) {
-        const span = document.createElement("span");
-        span.className = "point";
-        if(activeSlide == i) {
-            span.classList.add('active');
-        }
-        pointsSlider.append(span);
-      } 
-    const setPoint = () => {
-        const points = document.querySelectorAll('.point')
-        for (let i = 0; i < points.length; i++) {
-            points[i].classList.remove('active');
-            if(i == activeSlide) {
-                points[i].classList.add('active');
-            }
-        }
-    }
-    const setPosition = () => {
-        track.style.transform = `translateX(${position}px)`;
-    }
-    const points = document.querySelectorAll('.point')
-    points.forEach(point => {
-        point.addEventListener("click", function(e) {
-            for (let i = 0; i < points.length; i++) {
-                if(points[i] == point){
-                    position = -(widthSlider * i)
-                    activeSlide = i
-                    track.style.transform = `translateX(${position}px)`;
-                    setPoint();
-                }
-            }
-        }) 
-    });    
-
-}
-
-
-
+// Burger
 if (iconMenu) {
     const menuBody = document.querySelector('.menu__body');
     const langMob = document.querySelector('.lang__mob')
@@ -118,6 +15,19 @@ if (iconMenu) {
         body.classList.toggle('lock');
     })
 }
+
+// Footer
+footer.addEventListener('swiped-up', function (e) {
+    contacts.classList.add('active');
+});
+footer.addEventListener('swiped-down', function (e) {
+    contacts.classList.remove('active');
+});
+
+
+
+// Swipe script
+
 (function (window, document) {
 
     'use strict';
@@ -267,14 +177,3 @@ if (iconMenu) {
     }
 
 }(window, document));
-// footer.addEventListener("click", function(e) {
-//     contacts.classList.toggle('active');
-// })
-footer.addEventListener('swiped-up', function (e) {
-    console.log(e.target);
-    contacts.classList.add('active');
-});
-footer.addEventListener('swiped-down', function (e) {
-    console.log(e.target);
-    contacts.classList.remove('active');
-});
