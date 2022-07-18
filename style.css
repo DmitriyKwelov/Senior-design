@@ -954,10 +954,12 @@ footer {
     width: 100%;
     overflow: hidden;
 }
+
 .wraper__gradient__box__com {
     width: 100%;
     overflow: hidden;
 }
+
 .third__scection__nft__content {
     display: flex;
     position: relative;
@@ -1610,9 +1612,46 @@ footer {
     z-index: -1;
     transition: 0.4s;
 }
+.violet__box__track{
+    display: flex;
+}
+.violet__box__item {
+    min-width: 345px;
+    height: 392px;
+    border-radius: 20px;
+    margin-right: 50px;
+}
+.violet__box__content{
+    padding: 43px 25px 25px 25px;
+}
+.violet__box__number {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 110px;
+    color: #FFFFFF;
+}
 
+.violet__box__item.active {
+    background: linear-gradient(271.18deg, rgba(108, 87, 174, 1) 1.14%, rgba(105, 87, 225, 1) 117.13%);
+    transition: 1s;
+}
 
+.bg__line__violet__box {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #6C57B3;
+    opacity: 1;
+    z-index: -1;
+    transform: 0.4s;
+}
 
+.violet__box__item.active .bg__line__violet__box {
+    background: #242E3A;
+}
 
 #switch__info__section {
     margin-top: 170px;
@@ -1764,6 +1803,8 @@ footer {
 
 .gradient__box__item {
     position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .com__strategy__gradient__box {
@@ -1813,6 +1854,40 @@ footer {
     margin-top: 100px;
 }
 
+.gradient__box__item__platform {
+    width: 345px;
+    height: 370px;
+}
+
+.gradient__box__platform__content {
+    padding: 50px 43px 50px 43px;
+}
+
+.gradient__box__item__platform:nth-child(1) {
+    background: linear-gradient(271.18deg, #6C57AE 1.14%, #6957E1 117.13%);
+}
+
+.gradient__box__item__platform:nth-child(2) {
+    background: linear-gradient(115.08deg, #F1A058 26.93%, #EAE546 142.8%);
+    position: inherit;
+    top: -40px;
+    position: relative;
+}
+
+.gradient__box__item__platform:nth-child(3) {
+    background: linear-gradient(134.88deg, #4CDCDC 2.91%, #0F7E7E 96.68%);
+}
+
+.gradient__box__item__platform:nth-child(4) {
+    background: linear-gradient(134.88deg, #DD81FF 2.91%, #6957E1 96.68%);
+    position: inherit;
+    top: -40px;
+    position: relative;
+}
+.wrapper__slider__scroll {
+    width: 100%;
+    overflow: hidden;
+}
 @media (max-width: 1680px) {
     .first__section__right__content img {
         z-index: 7;
@@ -2064,6 +2139,36 @@ footer {
         background: linear-gradient(134.88deg, #4CDCDC 2.91%, #F1A058 96.68%);
         top: 0;
     }
+
+    .violet__wite__box {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .gradient__box {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .gradient__box__item__com {
+        margin-bottom: 40px;
+    }
+
+    .com__strategy__gradient__box .gradient__box__item:nth-child(2) {
+        top: 0;
+    }
+
+    .gradient__box__item__platform:nth-child(2) {
+        top: 0;
+    }
+
+    .gradient__box__item__platform:nth-child(4) {
+        top: 0;
+    }
+
+    .gradient__box__item__platform {
+        margin-bottom: 40px;
+    }
 }
 
 @media (max-width: 1203px) {
@@ -2194,20 +2299,6 @@ footer {
     .second__scection__nft__right img {
         width: 450px;
     }
-    .violet__wite__box {
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .gradient__box{
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .gradient__box__item__com{
-        margin-bottom: 40px;
-    }
-    .com__strategy__gradient__box .gradient__box__item:nth-child(2) {
-        top: 0;
-    }
 }
 
 @media (max-width: 1099px) {
@@ -2309,12 +2400,14 @@ footer {
     .container__nft__work {
         padding: 0 40px;
     }
-    .points__container{
+
+    .points__container {
         margin-top: 27px;
         display: flex;
         justify-content: center;
         width: 100%;
     }
+
     .points__slider__nft__work {
         margin-top: 27px;
         display: flex;
@@ -2425,6 +2518,9 @@ footer {
 
     .teem__nft__item__img {
         right: 0;
+    }
+    .violet__box__item {
+        margin-right: 0px;
     }
 }
 
@@ -2764,6 +2860,7 @@ footer {
     .switch__info__container {
         padding: 0 40px;
     }
+
     .com__strategy__gradient__box {
         flex-wrap: nowrap;
         justify-content: flex-start;
@@ -2771,6 +2868,23 @@ footer {
         position: relative;
         margin-top: 115px;
         width: 100vw;
+    }
+
+    .platform__strategy__gradient__box {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .wrapper__slider {
+        width: 100%;
+        overflow: hidden;
+    }
+    .violet__box__item {
+        background: linear-gradient(271.18deg, rgba(108, 87, 174, 1) 1.14%, rgba(105, 87, 225, 1) 117.13%);
+        transition: 1s;
+    }
+    .bg__line__violet__box {
+        background: #242E3A;
     }
 }
 
