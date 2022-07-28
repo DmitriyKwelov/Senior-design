@@ -1,6 +1,4 @@
 const container = document.querySelector('.container')
-containerNftWork = document.querySelector('.container__nft__work')
-containerNftWork.style.marginLeft = getComputedStyle(container).marginLeft;
 const nftFaq = document.querySelectorAll('.nft__faq__item')
 const boxNft = document.querySelectorAll('.box__work__nft')
 
@@ -17,7 +15,45 @@ nftFaq.forEach(item => {
         item.classList.toggle('active')
     })
 });
+if (window.screen.width > 992) {
+    console.log('fawefwef');
+    const violetTrack = document.querySelector('.third__scection__nft__content');
+    const violetItemm = document.querySelectorAll('.box__work__nft')
+    const violetWidthTrack = parseInt(getComputedStyle(violetItemm[0]).minWidth) + parseInt(getComputedStyle(violetItemm[0]).marginRight);
 
+    violetItemm.forEach(item => {
+        item.addEventListener('click', function (e) {
+            violetItemm.forEach(item => {
+                item.classList.remove('active')
+            });
+            item.classList.add('active')
+        })
+    });
+    const positionvioletDesk = parseInt(getComputedStyle(container).marginLeft) + 25;
+    violetTrack.style.transform = `translateX(${positionvioletDesk}px)`;
+    let positionNumber = positionvioletDesk;
+    violetTrack.onmousedown = function (event) {
+        event.preventDefault()
+        const firstPoistX = event.clientX;
+        let finalPosition = null;
+        function onMouseMove(event) {
+            let position = firstPoistX - event.clientX;
+            finalPosition = positionNumber - position / 25;
+            if (positionvioletDesk >= finalPosition && -((violetWidthTrack * violetItemm.length) - (innerWidth - 100)) < finalPosition) {
+                console.log('fwsefwsef');
+                positionNumber = finalPosition
+                violetTrack.style.transform = `translateX(${finalPosition}px)`;
+            }
+        }
+
+        violetTrack.addEventListener('mousemove', onMouseMove);
+
+        document.onmouseup = function () {
+            violetTrack.removeEventListener('mousemove', onMouseMove);
+            violetTrack.onmouseup = null;
+        };
+    }
+}
 if (window.screen.width <= 1010) {
     let activeSlide = 0;
     let position = 0;

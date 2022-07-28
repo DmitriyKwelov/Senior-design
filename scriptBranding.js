@@ -221,7 +221,7 @@ if (window.screen.width > 992) {
             item.classList.add('active')
         })
     });
-
+    const container = document.querySelector('.container')
     const positionvioletDesk = parseInt(getComputedStyle(container).marginLeft) + 40;
     violetTrack.style.transform = `translateX(${positionvioletDesk}px)`;
     let positionNumber = positionvioletDesk;

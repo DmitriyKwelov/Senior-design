@@ -257,7 +257,7 @@ h3 {
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
-    margin: 10px 0 50px 0;
+    margin: 10px 0 0 0;
 }
 
 .burger__bg__circles {
@@ -308,6 +308,7 @@ h3 {
 .main__btn {
     width: 290px;
     height: 75px;
+    margin-top: 40px;
 }
 
 .more__btn {
@@ -1501,7 +1502,25 @@ footer {
     align-items: center;
 }
 
+.people__with__one__message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.people__with__one__message__dina {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+
 .branding__analysis__right {
+    padding-left: 74px;
+}
+
+.people__with__one__message__right {
     padding-left: 74px;
 }
 
@@ -1526,6 +1545,18 @@ footer {
 .message__bg__left__mini {
     position: absolute;
     bottom: -5px;
+    right: -12px;
+}
+
+.message__bg__left__mini__straight {
+    position: absolute;
+    bottom: 0;
+    right: -12px;
+}
+
+.message__bg__left__straight {
+    position: absolute;
+    bottom: 0;
     right: -12px;
 }
 
@@ -1675,6 +1706,41 @@ footer {
     background: #242E3A;
 }
 
+.violet__advantages__box__item {
+    min-width: 345px;
+    height: 392px;
+    border-radius: 20px;
+    background: linear-gradient(271.18deg, rgba(108, 87, 174, 0) 1.14%, rgba(105, 87, 225, 0) 117.13%);
+    transition: 0.4s;
+    margin-right: 25px;
+}
+
+.violet__advantages__box__item.active {
+    background: linear-gradient(271.18deg, #6C57AE 1.14%, #6957E1 117.13%);
+}
+
+.violet__advantages__box__conent {
+    padding: 43px 25px 25px 25px;
+}
+
+.violet__advantages__box__conent img {
+    margin-bottom: 40px;
+}
+
+.violet__advantages__box__item .violet__advantages__box__line {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: rgb(108, 87, 174);
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.violet__advantages__box__item.active .violet__advantages__box__line {
+    background: rgb(0, 0, 0, 0);
+}
+
 #switch__info__section {
     margin-top: 170px;
     position: relative;
@@ -1781,6 +1847,13 @@ footer {
     justify-content: space-between;
 }
 
+.message__people__straight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 130px;
+}
+
 .switch__info__container {
     padding: 0;
 }
@@ -1790,6 +1863,12 @@ footer {
 }
 
 .positioning__brand__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message__people__straight__left {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -1954,7 +2033,9 @@ footer {
 .gradient__box__item__content__logo {
     padding: 35px 40px 40px 40px;
 }
-
+.gradient__item__content__advertising{
+    padding: 35px 40px 40px 40px;
+}
 .gradient__box__item__logo:nth-child(1) {
     background: #6957E1;
 }
@@ -2072,6 +2153,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .gradient__3d__graph__item__content {
@@ -2132,6 +2214,12 @@ footer {
     top: 300px;
 }
 
+.main__web__design__right__content__dina img {
+    position: absolute;
+    right: 290px;
+    top: 240px;
+}
+
 .main__web__design__left__content {
     margin-top: 120px;
     max-width: 800px;
@@ -2170,9 +2258,11 @@ footer {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
-.gradient__box__small__item__content{
+
+.gradient__box__small__item__content {
     padding: 30px 35px 0 35px;
 }
+
 .gradient__box__small__item:nth-child(1) {
     background: linear-gradient(271.18deg, #6C57AE 1.14%, #6957E1 117.13%);
 }
@@ -2194,23 +2284,38 @@ footer {
     top: -40px;
     position: relative;
 }
-.icon__with__text{
+
+.icon__with__text {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 100px;
 }
-.icon__with__text__item{
+
+.icon__with__text__item {
     width: 359px;
     margin-bottom: 30px;
 }
-.icon__with__text__item__content{
+
+.icon__with__text__item__slogans {
+    width: 360px;
+    margin-bottom: 30px;
+}
+
+.icon__with__text__slogan {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.icon__with__text__item__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.icon__with__text__item__content p{
+
+.icon__with__text__item__content p {
     font-family: 'Montserrat';
     font-style: italic;
     font-weight: 700;
@@ -2219,7 +2324,8 @@ footer {
     color: #fff;
     padding-right: 10px;
 }
-.circle__with__icon{
+
+.circle__with__icon {
     min-width: 90px;
     height: 90px;
     display: flex;
@@ -2228,6 +2334,143 @@ footer {
     border-radius: 100%;
     border: 1px solid #fff;
     margin-right: 27px;
+}
+
+.violet__advantages__box__wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.violet__advantages__box {
+    display: flex;
+    position: relative;
+    margin-top: 115px;
+    width: 100vw;
+}
+
+.gradient__box__copywriting {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gradient__box__copywriting__item {
+    width: 460px;
+}
+
+.gradient__box__copywriting__item:nth-child(1) {
+    height: 404px;
+    background: #6957E1;
+}
+
+.gradient__box__copywriting__item:nth-child(2) {
+    position: inherit;
+    top: -40px;
+    position: relative;
+    height: 560px;
+    background: linear-gradient(115.08deg, #F1A058 26.93%, #EAE546 142.8%);
+}
+
+.gradient__box__copywriting__item:nth-child(2) h3 {
+    color: #000000;
+}
+
+.gradient__box__copywriting__item:nth-child(2) .description {
+    color: #000000;
+}
+
+.gradient__box__copywriting__item:nth-child(3) {
+    height: 665px;
+    background: linear-gradient(134.88deg, #4CDCDC 2.91%, #0F7E7E 96.68%);
+}
+
+.gradient__box__copywriting__item:nth-child(3) h3 {
+    color: #000000;
+}
+
+.gradient__box__copywriting__item:nth-child(3) .description {
+    color: #000000;
+}
+
+.gradient__box__copywriting__item:nth-child(4) {
+    height: 404px;
+    background: linear-gradient(134.88deg, #DD81FF 2.91%, #6957E1 96.68%);
+    position: inherit;
+    top: -150px;
+    position: relative;
+}
+
+.gradient__box__slogans {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.gradient__box__slogans__item {
+    width: 610px;
+}
+
+.gradient__box__slogans__item:nth-child(1) {
+    background: linear-gradient(134.88deg, #DD81FF 2.91%, #6957E1 96.68%);
+}
+
+.gradient__box__slogans__item:nth-child(2) {
+    background: linear-gradient(271.18deg, #6C57AE 1.14%, #6957E1 117.13%);
+}
+
+.people__center {
+    display: flex;
+    justify-content: center;
+}
+
+.gradient__box__advertising__item {
+    width: 463.13px;
+    height: 282.23px;
+}
+.gradient__box__advertising__item:nth-child(1) {
+    background: linear-gradient(271.18deg, #6C57AE 1.14%, #6957E1 117.13%);
+}
+.gradient__box__advertising__item:nth-child(2) {
+    background: #F1A058;
+    position: inherit;
+    top: -40px;
+    position: relative;
+}
+.gradient__box__advertising__item:nth-child(3) {
+    background: linear-gradient(134.88deg, #4CDCDC 2.91%, #0F7E7E 96.68%);
+}
+.wrapper__slider__stages{
+    margin-top: 80px;
+}
+.gradient__img{
+    position: absolute;
+    top: -60px;
+    right: 0;
+}
+.gradient__img__bottom{
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+}
+
+.gradient__big__img{
+    position: absolute;
+    top: -100px;
+    right: 0;
+}
+.gradient__in__big__img{
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+}
+.gradient__in__box__img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.message__positioning__brand__center{
+    margin-bottom: 35px;
 }
 @media (max-width: 1680px) {
     .first__section__right__content img {
@@ -2243,6 +2486,13 @@ footer {
         top: 310px;
         width: 450px;
         position: absolute;
+    }
+
+    .main__web__design__right__content__dina img {
+        z-index: 7;
+        width: 400px;
+        right: 260px;
+        top: 240px;
     }
 
     .main__circle1 {
@@ -2340,6 +2590,35 @@ footer {
 
     .fourth__section__box {
         margin: 40px;
+    }
+
+    .gradient__box__copywriting__item:nth-child(1) {
+        height: 404px;
+        background: #6957E1;
+    }
+
+    .gradient__box__copywriting__item:nth-child(2) {
+        position: inherit;
+        top: 0;
+        position: relative;
+        height: 560px;
+        background: linear-gradient(115.08deg, #F1A058 26.93%, #EAE546 142.8%);
+    }
+
+    .gradient__box__copywriting__item:nth-child(3) {
+        position: inherit;
+        top: -150px;
+        position: relative;
+        height: 665px;
+        background: linear-gradient(134.88deg, #4CDCDC 2.91%, #0F7E7E 96.68%);
+    }
+
+    .gradient__box__copywriting__item:nth-child(4) {
+        height: 404px;
+        background: linear-gradient(134.88deg, #DD81FF 2.91%, #6957E1 96.68%);
+        position: inherit;
+        top: 0px;
+        position: relative;
     }
 }
 
@@ -2602,19 +2881,22 @@ footer {
     .gradient__3d__graph__item:nth-child(2) {
         top: 0;
     }
+
     .gradient__box__small {
         margin-top: 150px;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
     }
-    .gradient__box__small__item{
+
+    .gradient__box__small__item {
         margin-bottom: 30px;
     }
+
     .gradient__box__small__item:nth-child(2) {
         top: 0;
     }
-    
+
     .gradient__box__small__item:nth-child(4) {
         top: 0;
     }
@@ -2778,12 +3060,32 @@ footer {
     }
 }
 
+@media (min-width: 1100px) {
+    .icon__with__text__item__slogans:nth-child(3n+3) {
+        justify-self: end;
+    }
+
+    .icon__with__text__item__slogans:nth-child(3n+2) {
+        justify-self: center;
+    }
+}
+
 @media (max-width: 1099px) {
     .lastItem {
         margin-top: 40px;
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+
+    .icon__with__text__slogan {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .icon__with__text__item__slogans:nth-child(2n+2) {
+        justify-self: end;
     }
 }
 
@@ -3002,6 +3304,12 @@ footer {
     }
 }
 
+@media (max-width: 999px) {
+    .gradient__box__copywriting__item:nth-child(3) {
+        top: 0;
+    }
+}
+
 @media (max-width: 992px) {
     .first__section__left__content {
         margin-top: 60px;
@@ -3217,15 +3525,27 @@ footer {
         justify-content: center;
     }
 
-    .branding__analysis__right {
-        order: -1;
+    .people__with__one__message {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .branding__analysis__right {
+        order: -1;
+        padding-left: 20px;
+    }
+
+    .people__with__one__message__right {
+        order: -1;
         padding-left: 20px;
     }
 
     .positioning__brand {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .message__people__straight {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -3389,6 +3709,56 @@ footer {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .people__with__one__message__left {
+        margin-top: 50px;
+    }
+
+    .violet__advantages__box__item {
+        background: rgb(0, 0, 0, 0);
+        margin: 0;
+    }
+
+    .violet__advantages__box__item.active {
+        background: rgb(0, 0, 0, 0);
+    }
+
+    .violet__advantages__box__conent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .violet__advantages__box__conent img {
+        margin-bottom: 40px;
+    }
+
+    .violet__advantages__box__item .violet__advantages__box__line {
+        background: #fff;
+    }
+
+    .violet__advantages__box__item.active .violet__advantages__box__line {
+        background: #fff;
+    }
+
+    .gradient__box__copywriting {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .gradient__box__slogans {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gradient__box__slogans__item {
+        width: 610px;
+    }
+    .gradient__box__advertising{
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -3558,6 +3928,20 @@ footer {
     #first__scection__nft {
         margin-bottom: 150px;
     }
+
+    .icon__with__text__slogan {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .icon__with__text__item__slogans:nth-child(2n+2) {
+        justify-self: center;
+    }
+
+    .icon__with__text__item__slogans {
+        justify-self: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -3590,7 +3974,7 @@ footer {
         font-size: 16px;
         line-height: 19px;
         color: #FFFFFF;
-        margin: 20px 0 40px 0;
+        margin: 20px 0 0 0;
     }
 
     .second__section__content__item.img {
@@ -3774,6 +4158,26 @@ footer {
 
     .main__web__design__left__content {
         margin-top: 50px;
+    }
+
+    .message__clear__mb {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .message__clear__mb .time__message__right {
+        display: none;
+    }
+
+    .message__clear__mb .message__content {
+        padding: 0;
+    }
+
+    .message__clear__mb .message__bg__right {
+        display: none;
+    }
+
+    .people__with__one__message__right {
+        padding: 0;
     }
 }
 
@@ -4125,6 +4529,11 @@ footer {
         justify-content: center;
     }
 
+    .people__with__one__message__left {
+        display: flex;
+        justify-content: center;
+    }
+
     .message__people {
         width: 80%;
     }
@@ -4161,6 +4570,34 @@ footer {
 
     .main__web__design__left__content {
         margin-top: 0;
+    }
+
+    .people__center {
+        display: none;
+    }
+    .gradient__img{
+        display: none;
+    }
+    .gradient__img__bottom{
+        display: none;
+    }
+    .gradient__in__big__img{
+        display: none;
+    }
+    .gradient__big__img{
+        display: none;
+    }
+    .gradient__in__box__img{
+        display: none;
+    }
+    .gradient__bin__bottom__img{
+        display: none;
+    }
+    .gradient__box__small{
+        margin-top: 50px;
+    }
+    .violet__advantages__box {
+        margin-top: 50px;
     }
 }
 
@@ -4314,29 +4751,106 @@ footer {
         margin-top: 17px;
         width: 200px;
     }
+
     .gradient__box__small__item {
         width: 100%;
         height: 140px;
     }
-    .icon__with__text__item{
+
+    .icon__with__text__item {
         width: 100%;
         margin-bottom: 30px;
     }
-    .circle__with__icon{
+
+    .circle__with__icon {
         min-width: 60px;
         height: 60px;
     }
-    .icon__with__text__item__content{
+
+    .icon__with__text__item__content {
         display: flex;
         justify-content: flex-start;
         align-items: center;
     }
-    .icon__with__text__item__content p{
+
+    .icon__with__text__item__content p {
         font-family: 'Montserrat';
         font-style: italic;
         font-weight: 700;
         font-size: 16px;
         line-height: 20px;
         color: #FFFFFF;
+    }
+
+    .gradient__box__item {
+        width: 100%;
+    }
+    .main__title__branding{
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    .switch__info__track {
+        display: flex;
+        position: relative;
+        margin-top: 50px;
+        width: 100vw;
+    }
+    #switch__info__section{
+        margin-bottom: 50px;
+    }
+    .positioning__brand {
+        margin-top: 60px;
+    }
+    .people__with_text {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .com__strategy__gradient__box {
+        margin-top: 50px;
+    }
+    .gradient__box {
+        margin-top: 50px;
+    }
+    .main__title__graph__design{
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    #switch__info__section{
+        margin-top: 0;
+    }
+    .gradient__3d__graph {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .gradient__3d__graph__item{
+        height: 160px;
+    }
+    .gradient__3d__graph__item:nth-child(2) {
+        height: 160px;
+    }
+    .gradient__box__advertising__item {
+        height: 150px;
+        display: flex;
+        align-items: center;
+    }
+    .gradient__item__content__advertising{
+        padding: 0 25px 0 25px;
+    }
+    .gradient__item__content__advertising h3{
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
     }
 }

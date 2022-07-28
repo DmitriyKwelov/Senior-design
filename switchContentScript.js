@@ -46,7 +46,7 @@ if (window.screen.width > 992) {
         function onMouseMove(event) {
             let position = firstPoistX - event.clientX;
             finalPosition = positionNumber - position / 25;
-            if (positionSwitchInfoDesk >= finalPosition && -((widthTrack * switchInfoItemm.length) - window.screen.width) < finalPosition) {
+            if (positionSwitchInfoDesk >= finalPosition && -((widthTrack * switchInfoItemm.length) - innerWidth) < finalPosition) {
                 positionNumber = finalPosition
                 switchTrack.style.transform = `translateX(${finalPosition}px)`;
             }
