@@ -1,6 +1,7 @@
 const iconMenu = document.querySelector('.menu__icon');
 const footer = document.querySelector('footer')
 const contacts = document.querySelector('.contacts')
+const scrollTop = document.querySelector('.scroll__top')
 
 
 // Burger
@@ -24,8 +25,17 @@ footer.addEventListener('swiped-down', function (e) {
     contacts.classList.remove('active');
 });
 
-
-
+// Scroll top
+window.onscroll = () => {
+    if(window.scrollY > 1000) {
+        scrollTop.classList.add('active')
+    } else if (window.scrollY < 1000) {
+        scrollTop.classList.remove('active')
+    }
+}
+scrollTop.onclick = () => {
+    window.scroll(0, 0);
+}
 // Swipe script
 
 (function (window, document) {

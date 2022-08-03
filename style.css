@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background: #242E3A;
     margin: 0;
     padding: 0;
 }
-
+.scroll__top{
+    opacity: 0;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1231231;
+    transition: .4s;
+    cursor: pointer;
+}
+.scroll__top.active{
+    opacity: 1;
+}
 .lock {
     overflow: hidden;
 }
@@ -18,8 +31,14 @@ header {
     max-width: 1439px;
     margin: 0 auto;
     padding: 0 40px;
+    z-index: 6;
 }
-
+.fawefwsef div{
+    z-index: -1;
+}
+.fawefwsef img{
+    z-index: -1;
+}
 .container__section__slider {
     max-width: 1439px;
     margin: 0 auto;
@@ -107,7 +126,7 @@ header {
 :root {
     --marquee-elements-displayed: 3.6;
     --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed)));
-    --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3.5s);
 }
 
 .marquee-content {
@@ -169,6 +188,7 @@ header {
 
 #first__section {
     margin-top: 50px;
+    z-index: 6;
 }
 
 #third__section {
@@ -231,9 +251,7 @@ h3 {
 }
 
 .nft__gradient {
-    background: radial-gradient(18.98% 327.37% at 20.85% 100%, #F1B46C 7.81%, #A28CC7 44.44%, #80AEC5 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-    ;
+    background: linear-gradient(45deg, #F1B46C 7.81%, #A28CC7 44.44%, #80AEC5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -241,13 +259,11 @@ h3 {
 }
 
 .main__title__gradient {
-    background: radial-gradient(48.18% 811.74% at 1.82% 80.23%, #F1B46C 7.81%, #A28CC7 44.44%, #80AEC5 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-    ;
+    background: radial-gradient(48.18% 811.74% at 1.82% 80.23%, #F1B46C 7.81%, #A28CC7 44.44%, #80AEC5 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    color: transparent;
+    padding-left: 4px;
 }
 
 .main__description {
@@ -299,6 +315,10 @@ h3 {
     color: #FFFFFF;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -532,22 +552,6 @@ h3 {
     width: 50%;
 }
 
-.third__box p {
-    color: #000000;
-}
-
-.third__box h2 {
-    color: #000000;
-}
-
-.second__box h2 {
-    color: #000000;
-}
-
-.second__box p {
-    color: #000000;
-}
-
 .fifth__section__right__content {
     display: flex;
     flex-direction: column;
@@ -569,6 +573,7 @@ h3 {
     border: #6C57AE 1px solid;
     background: #242E3A;
     margin-bottom: 13px;
+    resize: none;
 }
 
 .input__text::placeholder {
@@ -604,6 +609,7 @@ h3 {
     margin-top: 10px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .checkbox {
@@ -626,22 +632,14 @@ h3 {
     position: relative;
     margin-right: 22px;
 }
-
-.custom-checkbox::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    background: #220778;
+.custom-checkbox img{
     opacity: 0;
-    transition: 1s;
+    transition: 0.4s;
+    position: absolute;
+    left: 7px;
+    bottom: 7px;
 }
-
-.checkbox:checked+.custom-checkbox::before {
+.checkbox:checked+.custom-checkbox img{
     opacity: 1;
 }
 
@@ -736,6 +734,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 112;
 }
 
 .line__footer {
@@ -858,13 +857,14 @@ footer {
 }
 
 .NFT__gradient {
-    background: radial-gradient(107.69% 1847.47% at 1.82% 80.23%, #F1B46C 64.63%, #A28CC7 79.04%, #80AEC5 100%)
+    background: linear-gradient(45deg, #F1B46C 30%, #A28CC7, #80AEC5)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
     ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    padding-right: 5px;
 }
 
 .first__scection__nft__content {
@@ -976,6 +976,7 @@ footer {
     background: linear-gradient(271.18deg, rgba(108, 87, 174, 0) 1.14%, rgba(105, 87, 225, 0) 117.13%);
     transition: 1s;
     position: relative;
+    cursor: pointer;
 }
 
 .box__work__nft__content {
@@ -1055,14 +1056,13 @@ footer {
     margin-top: 300px;
 }
 
-#nft__faq h2 {
-    background: radial-gradient(6.73% 126.32% at 1.82% 80.23%, #F1B46C 3.54%, #A28CC7 80.5%, #80AEC5 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-    ;
+.faq__nft__gradient {
+    background: linear-gradient(90deg, #F1B46C 30%, #A28CC7, #80AEC5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    
 }
 
 .nft__faq__content {
@@ -1074,6 +1074,7 @@ footer {
     justify-content: space-between;
     margin-bottom: 70px;
     transition: 1s;
+    cursor: pointer;
 }
 
 .nft__faq__icon__content {
@@ -1173,9 +1174,7 @@ footer {
 }
 
 .nft__case__gradient {
-    background: radial-gradient(18.98% 327.37% at 20.85% 100%, #F1B46C 7.81%, #A28CC7 44.44%, #80AEC5 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-    ;
+    background: linear-gradient(90deg, #F1B46C 7.81%, #A28CC7 44.44%, #80AEC5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1215,6 +1214,7 @@ footer {
     line-height: 22px;
     color: #FFFFFF;
     margin-top: 50px;
+    cursor: pointer;
 }
 
 .case__box__nft__content {
@@ -1223,7 +1223,12 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-
+.case__box__nft{
+    transition: 0.2s;
+}
+.junior__case__nft:hover{
+    box-shadow: 0px 0px 15px #F1A058;
+}
 .junior__case__nft::before {
     content: "";
     position: absolute;
@@ -1242,12 +1247,15 @@ footer {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    padding: 5px;
 }
 
 .junior__case__nft button {
     background: linear-gradient(115.08deg, #F1A058 26.93%, #EAE546 142.8%);
 }
-
+.senior__case__nft:hover{
+    box-shadow: 0px 0px 15px #6957E1;
+}
 .senior__case__nft::before {
     content: "";
     position: absolute;
@@ -1266,12 +1274,15 @@ footer {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    padding: 5px;
 }
 
 .senior__case__nft button {
     background: linear-gradient(134.88deg, #DD81FF 2.91%, #6957E1 96.68%);
 }
-
+.middle__case__nft:hover{
+    box-shadow: 0px 0px 15px #0F7E7E;
+}
 .middle__case__nft::before {
     content: "";
     position: absolute;
@@ -1290,6 +1301,7 @@ footer {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    padding: 5px;
 }
 
 .middle__case__nft button {
@@ -1352,6 +1364,11 @@ footer {
     text-transform: uppercase;
     color: #FFFFFF;
     margin-top: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .title__banner__nft {
@@ -1703,7 +1720,7 @@ footer {
 }
 
 .violet__box__item.active .bg__line__violet__box {
-    background: #242E3A;
+    background: linear-gradient(271.18deg, #6C57AE 1.14%, #6957E1 117.13%);
 }
 
 .violet__advantages__box__item {
@@ -1768,6 +1785,7 @@ footer {
     background: linear-gradient(271.18deg, rgba(108, 87, 174, 0) 1.14%, rgba(105, 87, 225, 0) 117.13%);
     transition: 1s;
     position: relative;
+    cursor: pointer;
 }
 
 .switch__info__content {
@@ -2008,14 +2026,56 @@ footer {
 }
 
 .main__title__graph__design__gradient {
-    background: radial-gradient(48.18% 811.74% at 1.82% 80.23%, #F1B46C 7.81%, #A28CC7 44.44%, #80AEC5 100%);
+    background: linear-gradient(90deg, #80AEC5 61.5%, #F1B46C 30%, #A28CC7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-
 }
-
+.blur__word{
+    color: #80AEC5;
+}
+.copywriting__gradient__title{
+    background: linear-gradient(90deg, #F1B46C 95%, #A28CC7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.gradient__advertising{
+    background: linear-gradient(90deg, #80AEC5 53.2%, #F1B46C 30%, #A28CC7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.gradient__last__text{
+    background: linear-gradient(113deg, #F1B46C 7.81%, #A28CC7 44.44%, #80AEC5 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.naming__gradient{
+    background: linear-gradient(113deg, #F1B46C 3%, #A28CC7 44.44%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.gradient__contact{
+    background: linear-gradient(90deg, #F1B46C, #A28CC7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.engaging__story__title{
+    margin-top: 150px;
+}
+.main__title__graph__design__gradient__last__word{
+    padding-left: 2px;
+}
 .logo__gradient__box {
     display: flex;
     justify-content: space-between;
@@ -2394,7 +2454,7 @@ footer {
 }
 
 .gradient__box__copywriting__item:nth-child(4) {
-    height: 404px;
+    height: 434px;
     background: linear-gradient(134.88deg, #DD81FF 2.91%, #6957E1 96.68%);
     position: inherit;
     top: -150px;
@@ -2471,6 +2531,47 @@ footer {
 }
 .message__positioning__brand__center{
     margin-bottom: 35px;
+}
+.tagline{
+    margin-top: 50px;
+}
+.naming{
+    margin-top: 50px;
+}
+.contact__title{
+    margin-bottom: 50px;
+}
+.contact__list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.contact__list img{
+    margin-right: 20px;
+}
+.contact__list a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.contact__list li{
+    margin-bottom: 25px;
+}
+.contact__list{
+    display: block;
+}
+.contact__list p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin: 0;
+}
+#contact__page__call__back{
+    margin-top: 400px;
 }
 @media (max-width: 1680px) {
     .first__section__right__content img {
@@ -2721,6 +2822,9 @@ footer {
         --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed)));
         --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
     }
+    .marquee-item img {
+        margin: 0 30px 0 0;
+    }
 }
 
 @media (max-width: 1459px) {
@@ -2900,6 +3004,9 @@ footer {
     .gradient__box__small__item:nth-child(4) {
         top: 0;
     }
+    .contact__list{
+        width: 450px;
+    }
 }
 
 @media (max-width: 1250px) {
@@ -3058,8 +3165,10 @@ footer {
         margin-top: 80px;
         max-width: 100%;
     }
+    .contact__list{
+        width: 100%;
+    }
 }
-
 @media (min-width: 1100px) {
     .icon__with__text__item__slogans:nth-child(3n+3) {
         justify-self: end;
@@ -3309,7 +3418,15 @@ footer {
         top: 0;
     }
 }
-
+@media (min-width: 993px) {
+    .menu__link.active {
+        background: linear-gradient(134.88deg, #DD81FF 2.91%, #6957E1 96.68%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}
 @media (max-width: 992px) {
     .first__section__left__content {
         margin-top: 60px;
@@ -3760,6 +3877,9 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
+    .engaging__story__title{
+        margin-top: 100px;
+    }
 }
 
 @media (max-width: 925px) {
@@ -4179,6 +4299,9 @@ footer {
     .people__with__one__message__right {
         padding: 0;
     }
+    .scroll__top{
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
@@ -4248,7 +4371,7 @@ footer {
     .main__btn {
         width: 220px;
         height: 55px;
-        margin: 0 auto;
+        margin-top: 25px;
     }
 
     .more__btn {
@@ -4598,6 +4721,27 @@ footer {
     }
     .violet__advantages__box {
         margin-top: 50px;
+    }
+    .engaging__story__title{
+        margin-top: 50px;
+    }
+    .contact__list img{
+        margin-right: 15px;
+    }
+    .contact__list li{
+        margin-bottom: 25px;
+    }
+    .contact__list{
+        display: block;
+    }
+    .contact__list p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 22px;
+        color: #FFFFFF;
+        margin: 0;
     }
 }
 
