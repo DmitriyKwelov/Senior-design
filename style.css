@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     background: #242E3A;
     margin: 0;
     padding: 0;
 }
-.scroll__top{
+
+.scroll__top {
     opacity: 0;
     position: fixed;
     bottom: 50px;
@@ -16,9 +19,11 @@ body {
     transition: .4s;
     cursor: pointer;
 }
-.scroll__top.active{
+
+.scroll__top.active {
     opacity: 1;
 }
+
 .lock {
     overflow: hidden;
 }
@@ -33,12 +38,15 @@ header {
     padding: 0 40px;
     z-index: 6;
 }
-.fawefwsef div{
+
+.fawefwsef div {
     z-index: -1;
 }
-.fawefwsef img{
+
+.fawefwsef img {
     z-index: -1;
 }
+
 .container__section__slider {
     max-width: 1439px;
     margin: 0 auto;
@@ -632,14 +640,16 @@ h3 {
     position: relative;
     margin-right: 22px;
 }
-.custom-checkbox img{
+
+.custom-checkbox img {
     opacity: 0;
     transition: 0.4s;
     position: absolute;
     left: 7px;
     bottom: 7px;
 }
-.checkbox:checked+.custom-checkbox img{
+
+.checkbox:checked+.custom-checkbox img {
     opacity: 1;
 }
 
@@ -1013,16 +1023,7 @@ footer {
     display: block;
     width: 100%;
     height: 2px;
-    background: #6C57B3;
-    z-index: -1;
-}
-
-.box__work__nft.active .bg__line__box__work__nft {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #6C57B3;
+    background: rgba(108, 87, 174, 0);
     opacity: 0;
     z-index: -1;
     transform: 0.4s;
@@ -1062,7 +1063,7 @@ footer {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    
+
 }
 
 .nft__faq__content {
@@ -1223,12 +1224,15 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-.case__box__nft{
+
+.case__box__nft {
     transition: 0.2s;
 }
-.junior__case__nft:hover{
+
+.junior__case__nft:hover {
     box-shadow: 0px 0px 15px #F1A058;
 }
+
 .junior__case__nft::before {
     content: "";
     position: absolute;
@@ -1253,9 +1257,11 @@ footer {
 .junior__case__nft button {
     background: linear-gradient(115.08deg, #F1A058 26.93%, #EAE546 142.8%);
 }
-.senior__case__nft:hover{
+
+.senior__case__nft:hover {
     box-shadow: 0px 0px 15px #6957E1;
 }
+
 .senior__case__nft::before {
     content: "";
     position: absolute;
@@ -1280,9 +1286,11 @@ footer {
 .senior__case__nft button {
     background: linear-gradient(134.88deg, #DD81FF 2.91%, #6957E1 96.68%);
 }
-.middle__case__nft:hover{
+
+.middle__case__nft:hover {
     box-shadow: 0px 0px 15px #0F7E7E;
 }
+
 .middle__case__nft::before {
     content: "";
     position: absolute;
@@ -1651,7 +1659,16 @@ footer {
 }
 
 .violet__wite__box__item.active .violet__wite__box__line {
-    background: #242E3A;
+    background: rgba(108, 87, 174, 0);
+}
+
+.takeBtn__container {
+    display: flex;
+    justify-content: center;
+}
+
+.violet__wite__box__item__content {
+    padding: 56px 25px 43px 25px;
 }
 
 .violet__wite__box__item .violet__wite__box__line {
@@ -2032,50 +2049,59 @@ footer {
     background-clip: text;
     text-fill-color: transparent;
 }
-.blur__word{
+
+.blur__word {
     color: #80AEC5;
 }
-.copywriting__gradient__title{
+
+.copywriting__gradient__title {
     background: linear-gradient(90deg, #F1B46C 95%, #A28CC7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
 }
-.gradient__advertising{
+
+.gradient__advertising {
     background: linear-gradient(90deg, #80AEC5 53.2%, #F1B46C 30%, #A28CC7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
 }
-.gradient__last__text{
-    background: linear-gradient(113deg, #F1B46C 7.81%, #A28CC7 44.44%, #80AEC5 100%); 
+
+.gradient__last__text {
+    background: linear-gradient(113deg, #F1B46C 7.81%, #A28CC7 44.44%, #80AEC5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
 }
-.naming__gradient{
-    background: linear-gradient(113deg, #F1B46C 3%, #A28CC7 44.44%); 
+
+.naming__gradient {
+    background: linear-gradient(113deg, #F1B46C 3%, #A28CC7 44.44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
 }
-.gradient__contact{
+
+.gradient__contact {
     background: linear-gradient(90deg, #F1B46C, #A28CC7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
 }
-.engaging__story__title{
+
+.engaging__story__title {
     margin-top: 150px;
 }
-.main__title__graph__design__gradient__last__word{
+
+.main__title__graph__design__gradient__last__word {
     padding-left: 2px;
 }
+
 .logo__gradient__box {
     display: flex;
     justify-content: space-between;
@@ -2093,9 +2119,11 @@ footer {
 .gradient__box__item__content__logo {
     padding: 35px 40px 40px 40px;
 }
-.gradient__item__content__advertising{
+
+.gradient__item__content__advertising {
     padding: 35px 40px 40px 40px;
 }
+
 .gradient__box__item__logo:nth-child(1) {
     background: #6957E1;
 }
@@ -2287,7 +2315,7 @@ footer {
 
 .gradient__box__research__item {
     width: 460px;
-    height: 490px;
+    min-height: 490px;
 }
 
 .gradient__box__research__item:nth-child(1) {
@@ -2431,26 +2459,9 @@ footer {
     height: 560px;
     background: linear-gradient(115.08deg, #F1A058 26.93%, #EAE546 142.8%);
 }
-
-.gradient__box__copywriting__item:nth-child(2) h3 {
-    color: #000000;
-}
-
-.gradient__box__copywriting__item:nth-child(2) .description {
-    color: #000000;
-}
-
 .gradient__box__copywriting__item:nth-child(3) {
     height: 665px;
     background: linear-gradient(134.88deg, #4CDCDC 2.91%, #0F7E7E 96.68%);
-}
-
-.gradient__box__copywriting__item:nth-child(3) h3 {
-    color: #000000;
-}
-
-.gradient__box__copywriting__item:nth-child(3) .description {
-    color: #000000;
 }
 
 .gradient__box__copywriting__item:nth-child(4) {
@@ -2488,80 +2499,98 @@ footer {
     width: 463.13px;
     height: 282.23px;
 }
+
 .gradient__box__advertising__item:nth-child(1) {
     background: linear-gradient(271.18deg, #6C57AE 1.14%, #6957E1 117.13%);
 }
+
 .gradient__box__advertising__item:nth-child(2) {
     background: #F1A058;
     position: inherit;
     top: -40px;
     position: relative;
 }
+
 .gradient__box__advertising__item:nth-child(3) {
     background: linear-gradient(134.88deg, #4CDCDC 2.91%, #0F7E7E 96.68%);
 }
-.wrapper__slider__stages{
+
+.wrapper__slider__stages {
     margin-top: 80px;
 }
-.gradient__img{
+
+.gradient__img {
     position: absolute;
     top: -60px;
     right: 0;
 }
-.gradient__img__bottom{
+
+.gradient__img__bottom {
     position: absolute;
     bottom: -30px;
     right: 0;
 }
 
-.gradient__big__img{
+.gradient__big__img {
     position: absolute;
     top: -100px;
     right: 0;
 }
-.gradient__in__big__img{
+
+.gradient__in__big__img {
     position: absolute;
     bottom: -100px;
     right: 0;
 }
-.gradient__in__box__img{
+
+.gradient__in__box__img {
     position: absolute;
     bottom: 0;
     right: 0;
 }
-.message__positioning__brand__center{
+
+.message__positioning__brand__center {
     margin-bottom: 35px;
 }
-.tagline{
+
+.tagline {
     margin-top: 50px;
 }
-.naming{
+
+.naming {
     margin-top: 50px;
 }
-.contact__title{
+
+.contact__title {
     margin-bottom: 50px;
 }
-.contact__list{
+
+.contact__list {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-.contact__list img{
+
+.contact__list img {
     margin-right: 20px;
 }
-.contact__list a{
+
+.contact__list a {
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-.contact__list li{
+
+.contact__list li {
     margin-bottom: 25px;
 }
-.contact__list{
+
+.contact__list {
     display: block;
 }
-.contact__list p{
+
+.contact__list p {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -2570,9 +2599,19 @@ footer {
     color: #FFFFFF;
     margin: 0;
 }
-#contact__page__call__back{
+
+#contact__page__call__back {
     margin-top: 400px;
 }
+
+.menu__link.active {
+    background: linear-gradient(134.88deg, #DD81FF 2.91%, #6957E1 96.68%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
 @media (max-width: 1680px) {
     .first__section__right__content img {
         z-index: 7;
@@ -2667,6 +2706,18 @@ footer {
 
     .first__scection__nft__right {
         margin: 150px 0 0 590px;
+    }
+}
+
+@media (max-width: 1550px) {
+    :root {
+        --marquee-elements-displayed: 3;
+        --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed)));
+        --marquee-animation-duration: calc(var(--marquee-elements) * 3.5s);
+    }
+
+    .marquee-item img {
+        margin: 0 30px 0 0;
     }
 }
 
@@ -2815,15 +2866,6 @@ footer {
 
     .main__circle2 {
         display: none;
-    }
-
-    :root {
-        --marquee-elements-displayed: 3;
-        --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed)));
-        --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
-    }
-    .marquee-item img {
-        margin: 0 30px 0 0;
     }
 }
 
@@ -3004,7 +3046,8 @@ footer {
     .gradient__box__small__item:nth-child(4) {
         top: 0;
     }
-    .contact__list{
+
+    .contact__list {
         width: 450px;
     }
 }
@@ -3129,7 +3172,7 @@ footer {
     :root {
         --marquee-elements-displayed: 2;
         --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed)));
-        --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+        --marquee-animation-duration: calc(var(--marquee-elements) * 3.5s);
     }
 
     /* nft */
@@ -3165,10 +3208,15 @@ footer {
         margin-top: 80px;
         max-width: 100%;
     }
-    .contact__list{
+
+    .contact__list {
         width: 100%;
     }
+    #contact__page__call__back {
+        margin-top: 200px;
+    }
 }
+
 @media (min-width: 1100px) {
     .icon__with__text__item__slogans:nth-child(3n+3) {
         justify-self: end;
@@ -3226,7 +3274,7 @@ footer {
         flex-direction: column;
         position: relative;
         margin-top: 50px;
-        height: 550px;
+        height: 580px;
     }
 
     .teem__nft__item {
@@ -3270,7 +3318,7 @@ footer {
         display: block;
         width: 100%;
         height: 2px;
-        background: #6C57B3;
+        background: rgba(108, 87, 174, 0);
         z-index: -1;
     }
 
@@ -3411,6 +3459,38 @@ footer {
     .violet__box__item {
         margin-right: 0px;
     }
+
+    .teem__nft__item:nth-child(1) {
+        order: 2;
+    }
+
+    .teem__nft__item:nth-child(2) {
+        order: 1;
+    }
+
+    .teem__nft__item:nth-child(3) {
+        order: 4;
+    }
+
+    .teem__nft__item:nth-child(4) {
+        order: 3;
+    }
+
+    .teem__nft__item:nth-child(5) {
+        order: 5;
+    }
+
+    .teem__nft__item:nth-child(6) {
+        order: 7;
+    }
+
+    .teem__nft__item:nth-child(7) {
+        order: 6;
+    }
+
+    /* .teem__nft__item__producer {
+        order: 3;
+    } */
 }
 
 @media (max-width: 999px) {
@@ -3418,16 +3498,16 @@ footer {
         top: 0;
     }
 }
-@media (min-width: 993px) {
+
+@media (max-width: 992px) {
     .menu__link.active {
-        background: linear-gradient(134.88deg, #DD81FF 2.91%, #6957E1 96.68%);
+        background: #68008C;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
     }
-}
-@media (max-width: 992px) {
+
     .first__section__left__content {
         margin-top: 60px;
     }
@@ -3542,6 +3622,10 @@ footer {
         100% {
             opacity: 1;
         }
+    }
+
+    #teem__nft {
+        margin-top: 100px;
     }
 
     .lang__mob a {
@@ -3724,7 +3808,7 @@ footer {
 
     .violet__wite__box__item {
         width: 345px;
-        height: 392px;
+        height: 258px;
         border-radius: 20px;
         background: linear-gradient(271.18deg, rgba(108, 87, 174, 0) 1.14%, rgba(105, 87, 225, 0) 117.13%);
         transition: 0.4s;
@@ -3801,7 +3885,7 @@ footer {
     }
 
     .bg__line__violet__box {
-        background: #242E3A;
+        background: rgba(108, 87, 174, 0);
     }
 
     .violet__box__track__no__scroll {
@@ -3873,11 +3957,13 @@ footer {
     .gradient__box__slogans__item {
         width: 610px;
     }
-    .gradient__box__advertising{
+
+    .gradient__box__advertising {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .engaging__story__title{
+
+    .engaging__story__title {
         margin-top: 100px;
     }
 }
@@ -4068,7 +4154,7 @@ footer {
     :root {
         --marquee-elements-displayed: 1.5;
         --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed)));
-        --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+        --marquee-animation-duration: calc(var(--marquee-elements) * 3.5s);
     }
 
     .first__section__right__content img {
@@ -4118,6 +4204,7 @@ footer {
         display: block;
         height: auto;
         width: 100%;
+        margin: 50px 0;
     }
 
     .container__for__more__btn {
@@ -4300,7 +4387,8 @@ footer {
     .people__with__one__message__right {
         padding: 0;
     }
-    .scroll__top{
+
+    .scroll__top {
         display: none;
     }
 }
@@ -4309,7 +4397,7 @@ footer {
     :root {
         --marquee-elements-displayed: 1.5;
         --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed)));
-        --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+        --marquee-animation-duration: calc(var(--marquee-elements) * 3.5s);
     }
 
     .marquee-item img {
@@ -4540,10 +4628,6 @@ footer {
         width: 320px;
     }
 
-    .bg__light__nft__picture {
-        display: none;
-    }
-
     .nft__faq__icon__content {
         width: 45px;
         height: 45px;
@@ -4601,10 +4685,19 @@ footer {
         margin-top: 120px;
     }
 
+    .nft__list li {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+    }
+
     .list li {
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 14px;
         line-height: 17px;
     }
@@ -4699,43 +4792,56 @@ footer {
     .people__center {
         display: none;
     }
-    .gradient__img{
+
+    .gradient__img {
         display: none;
     }
-    .gradient__img__bottom{
+
+    .gradient__img__bottom {
         display: none;
     }
-    .gradient__in__big__img{
+
+    .gradient__in__big__img {
         display: none;
     }
-    .gradient__big__img{
+
+    .gradient__big__img {
         display: none;
     }
-    .gradient__in__box__img{
+
+    .gradient__in__box__img {
         display: none;
     }
-    .gradient__bin__bottom__img{
+
+    .gradient__bin__bottom__img {
         display: none;
     }
-    .gradient__box__small{
+
+    .gradient__box__small {
         margin-top: 50px;
     }
+
     .violet__advantages__box {
         margin-top: 50px;
     }
-    .engaging__story__title{
+
+    .engaging__story__title {
         margin-top: 50px;
     }
-    .contact__list img{
+
+    .contact__list img {
         margin-right: 15px;
     }
-    .contact__list li{
+
+    .contact__list li {
         margin-bottom: 25px;
     }
-    .contact__list{
+
+    .contact__list {
         display: block;
     }
-    .contact__list p{
+
+    .contact__list p {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
@@ -4744,258 +4850,354 @@ footer {
         color: #FFFFFF;
         margin: 0;
     }
-}
 
-@media (max-width: 500px) {
-    .case__box__nft {
-        width: 100%;
-        min-height: 550px;
-        border-radius: 20px;
-        position: relative;
-        background: #242E3A;
-        border-radius: 34px;
-        margin: 0 0 30px 0;
-    }
-}
-
-@media (max-width: 425px) {
-    :root {
-        --marquee-elements-displayed: 1;
-        --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed)));
-        --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+    .third__scection__nft__content {
+        margin-top: 50px;
     }
 
-    h1 {
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 37px;
-        color: #FFFFFF;
+    #teem__nft {
+        margin-top: 70px;
     }
 
-    .main__title__web__design {
-        font-size: 20px;
-        line-height: 24px;
+    .teem__nft__item__img {
+        position: absolute;
+        top: -20px;
+        right: 0;
+        width: 20%;
     }
 
-    h2 {
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-        color: #FFFFFF;
+    .teem__nft__item__container {
+        padding: 35px 20px 35px 40px;
     }
 
-    .description {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        color: #FFFFFF;
+    .teem__nft__item {
+        height: 260px;
     }
 
-    .btn {
-        font-size: 14px;
+    #case__section {
+        margin-top: 100px;
     }
 
-    .main__btn {
-        width: 186px;
-        height: 45px;
+    .cases__box__nft {
+        margin-top: 30px;
     }
 
-    .more__btn {
-        width: 186px;
-        height: 45px;
+    #nft__faq {
+        margin-top: 50px;
     }
 
-    .marquee__infinite__item {
-        width: 300px;
-        height: 70px;
+    .nft__faq__content {
+        margin-top: 40px;
     }
 
-    .marquee__infinite__item p {
-        font-size: 14px;
+    #banner__nft {
+        margin-top: 50px;
     }
 
-    .fourth__section__box {
-        width: 100%;
-        height: 350px;
+    .violet__wite__box__item__content {
+        padding: 0 25px;
     }
 
-    .fourth__section__box img {
-        width: 115px;
+    .violet__wite__box__branding__analysis {
+        margin-top: 30px;
     }
 
-    .fourth__section__box {
-        padding: 30px 15px 20px 30px;
+    .gradient__box__research__item {
+        min-height: 420px;
+    }
+
+    .violet__advantages__box__item {
+        height: 280px;
+    }
+    .gradient__box__item__brand__book {
         height: 320px;
-        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-        border-radius: 20px;
     }
-
-    .social__media img {
-        width: 23px;
+    .message__positioning__brand__first .message__content{
+        padding-left: 48px;
     }
-
-    .ball__footer {
-        display: none;
-    }
-
-    .ball__footer_mb {
-        display: block;
-        position: absolute;
-        top: 6px;
-        right: 18px;
-    }
-
-    .third__section__item {
-        width: 300px;
-        height: 380px;
-    }
-
-    /* nft */
-    .takeBtn__container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .takeBtn {
-        width: 250px;
-        height: 45px;
-    }
-
-    .main__circle__nft1 {
-        z-index: -1;
-        position: absolute;
-        width: 705.88px;
-        height: 706px;
-        left: -388px;
-        top: 169px;
-        opacity: 0.2;
-        border: 0.659136px solid #C4C4C4;
-        border-radius: 100%;
-    }
-
-    .main__circle__nft2 {
-        z-index: -1;
-        position: absolute;
-        width: 461.4px;
-        height: 461.4px;
-        left: -256.12px;
-        top: 291.3px;
-        opacity: 0.2;
-        border: 0.659136px solid #C4C4C4;
-        border-radius: 100%;
-    }
-
-    .first__scection__nft__left img {
-        margin-top: 17px;
-        width: 200px;
-    }
-
-    .gradient__box__small__item {
-        width: 100%;
-        height: 140px;
-    }
-
-    .icon__with__text__item {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .circle__with__icon {
-        min-width: 60px;
-        height: 60px;
-    }
-
-    .icon__with__text__item__content {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .icon__with__text__item__content p {
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 20px;
-        color: #FFFFFF;
-    }
-
-    .gradient__box__item {
-        width: 100%;
-    }
-    .main__title__branding{
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-        color: #FFFFFF;
-    }
-    .switch__info__track {
-        display: flex;
-        position: relative;
-        margin-top: 50px;
-        width: 100vw;
-    }
-    #switch__info__section{
-        margin-bottom: 50px;
-    }
-    .positioning__brand {
-        margin-top: 60px;
-    }
-    .people__with_text {
-        display: flex;
-        align-items: center;
-        margin-bottom: 50px;
-    }
-    .com__strategy__gradient__box {
+    .title__near__gradient{
         margin-top: 50px;
     }
-    .gradient__box {
-        margin-top: 50px;
+    .wrapper__slider__stages {
+        margin-top: 20px;
     }
-    .main__title__graph__design{
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-    }
-    #switch__info__section{
-        margin-top: 0;
-    }
-    .gradient__3d__graph {
+    .icon__with__text {
         display: flex;
         justify-content: space-around;
+        align-items: center;
         flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    #contact__page__call__back {
         margin-top: 50px;
     }
-    .gradient__3d__graph__item{
-        height: 160px;
-    }
-    .gradient__3d__graph__item:nth-child(2) {
-        height: 160px;
-    }
-    .gradient__box__advertising__item {
-        height: 150px;
-        display: flex;
-        align-items: center;
-    }
-    .gradient__item__content__advertising{
-        padding: 0 25px 0 25px;
-    }
-    .gradient__item__content__advertising h3{
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-    }
 }
+    
+
+    @media (max-width: 500px) {
+        .case__box__nft {
+            width: 100%;
+            border-radius: 20px;
+            position: relative;
+            background: #242E3A;
+            border-radius: 34px;
+            margin: 0 0 30px 0;
+        }
+    }
+
+    @media (max-width: 425px) {
+        :root {
+            --marquee-elements-displayed: 1;
+            --marquee-element-width: calc(100vw / (var(--marquee-elements-displayed)));
+            --marquee-animation-duration: calc(var(--marquee-elements) * 3.5s);
+        }
+
+        h1 {
+            font-family: 'Montserrat';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+            color: #FFFFFF;
+        }
+
+        .main__title__web__design {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        h2 {
+            font-family: 'Montserrat';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+
+        .description {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+        }
+
+        .btn {
+            font-size: 14px;
+        }
+
+        .main__btn {
+            width: 186px;
+            height: 45px;
+        }
+
+        .more__btn {
+            width: 186px;
+            height: 45px;
+        }
+
+        .marquee__infinite__item {
+            width: 300px;
+            height: 70px;
+        }
+
+        .marquee__infinite__item p {
+            font-size: 14px;
+        }
+
+        .fourth__section__box {
+            width: 100%;
+            height: 350px;
+        }
+
+        .fourth__section__box img {
+            width: 115px;
+        }
+
+        .fourth__section__box {
+            padding: 30px 15px 20px 30px;
+            height: 320px;
+            box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+            border-radius: 20px;
+        }
+
+        .social__media img {
+            width: 23px;
+        }
+
+        .ball__footer {
+            display: none;
+        }
+
+        .ball__footer_mb {
+            display: block;
+            position: absolute;
+            top: 6px;
+            right: 18px;
+        }
+
+        .third__section__item {
+            width: 300px;
+            height: 380px;
+        }
+
+        /* nft */
+        .takeBtn__container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .takeBtn {
+            width: 250px;
+            height: 45px;
+        }
+
+        .main__circle__nft1 {
+            z-index: -1;
+            position: absolute;
+            width: 705.88px;
+            height: 706px;
+            left: -388px;
+            top: 169px;
+            opacity: 0.2;
+            border: 0.659136px solid #C4C4C4;
+            border-radius: 100%;
+        }
+
+        .main__circle__nft2 {
+            z-index: -1;
+            position: absolute;
+            width: 461.4px;
+            height: 461.4px;
+            left: -256.12px;
+            top: 291.3px;
+            opacity: 0.2;
+            border: 0.659136px solid #C4C4C4;
+            border-radius: 100%;
+        }
+
+        .first__scection__nft__left img {
+            margin-top: 17px;
+            width: 200px;
+        }
+
+        .gradient__box__small__item {
+            width: 100%;
+            height: 140px;
+        }
+
+        .icon__with__text__item {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .circle__with__icon {
+            min-width: 60px;
+            height: 60px;
+        }
+
+        .icon__with__text__item__content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .icon__with__text__item__content p {
+            font-family: 'Montserrat';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+
+        .gradient__box__item {
+            width: 100%;
+        }
+
+        .main__title__branding {
+            font-family: 'Montserrat';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+
+        .switch__info__track {
+            display: flex;
+            position: relative;
+            margin-top: 50px;
+            width: 100vw;
+        }
+
+        #switch__info__section {
+            margin-bottom: 50px;
+        }
+
+        .positioning__brand {
+            margin-top: 60px;
+        }
+
+        .people__with_text {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .com__strategy__gradient__box {
+            margin-top: 50px;
+        }
+
+        .gradient__box {
+            margin-top: 20px;
+        }
+
+        .main__title__graph__design {
+            font-family: 'Montserrat';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        #switch__info__section {
+            margin-top: 0;
+        }
+
+        .gradient__3d__graph {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .gradient__3d__graph__item {
+            height: 160px;
+        }
+
+        .gradient__3d__graph__item:nth-child(2) {
+            height: 160px;
+        }
+
+        .gradient__box__advertising__item {
+            height: 150px;
+            display: flex;
+            align-items: center;
+        }
+
+        .gradient__item__content__advertising {
+            padding: 0 25px 0 25px;
+        }
+
+        .gradient__item__content__advertising h3 {
+            font-family: 'Montserrat';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
