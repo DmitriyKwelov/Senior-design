@@ -4003,7 +4003,7 @@ footer {
     }
 
     .first__scection__nft__right {
-        margin: 100px 0 0 0;
+        margin: 50px 0 0 0;
     }
 
     .main__circle__nft1 {
@@ -4117,6 +4117,7 @@ footer {
     .mob__img {
         display: block;
         height: auto;
+        width: 100%;
     }
 
     .container__for__more__btn {
